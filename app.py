@@ -18,8 +18,10 @@ def load_content():
 # Route for the home page
 @app.route('/')
 def home():
+    image_folder = os.path.join('static', 'gallary')
+    image_names = os.listdir(image_folder)
     content, links, sayari_data = load_content()
-    return render_template('index.html', links=links, my=content, sayari=sayari_data)
+    return render_template('index.html', links=links, my=content, sayari=sayari_data, images=image_names)
 
 @app.route('/<path:page>')
 def render_page(page):

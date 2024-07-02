@@ -14,10 +14,10 @@
 
         <ul class="list-unstyled list-social">
 
-          <li><a href="{{ links.facebook }}"><i class="bi bi-facebook"></i></a></li>
-          <li><a href="{{ links.twitter }}"><i class="bi bi-twitter"></i></a></li>
+          <li><a href="{{ links.phone }}"><i class="bi bi-telephone"></i></a></li>
+          <li><a href="{{ links.youtube }}"><i class="bi bi-youtube"></i></a></li>
           <li><a href="{{ links.instagram }}"><i class="bi bi-instagram"></i></a></li>
-          <li><a href="{{ links.linkedin }}"><i class="bi bi-linkedin"></i></a></li>
+          <li><a href="{{ links.telegram }}"><i class="bi bi-telegram"></i></a></li>
         </ul>
       </div>
     </div>
@@ -132,18 +132,11 @@
         <div class="journal-block">
           <div class="row">
 
-      {% for item in sayari %}
+      {% for image in images %}
             <div class="col-lg-4 col-md-6">
               <div class="journal-info">
 
-                <a href="https://img.youtube.com/vi/{{ item.video_id }}/hqdefault.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><img src="https://img.youtube.com/vi/{{ item.video_id }}/hqdefault.jpg" class="img-responsive" alt="img"></a>
-                <div class="journal-txt">
-
-                  <h4><a href="blog-single.html">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
-                  <p class="separator">To an English person, it will seem like simplified English
-                  </p>
-
-                </div>
+                <a href="{{ url_for('static', filename='gallary/' + image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><img src="{{ url_for('static', filename='gallary/' + image) }}" class="img-responsive" alt="img"></a>
 
               </div>
             </div>
