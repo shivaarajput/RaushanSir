@@ -28,6 +28,11 @@
     <!-- ======= About Section ======= -->
     <div id="about" class="paddsection">
       <div class="container">
+
+      <div class="section-title text-center">
+        <h2>About</h2>
+      </div>
+
         <div class="row justify-content-between">
 
           <div class="col-lg-4 ">
@@ -50,46 +55,6 @@
         </div>
       </div>
     </div><!-- End About Section -->
-
-    <!-- ======= Services Section ======= -->
-    <div id="services">
-      <div class="container">
-
-        <div class="services-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-person"></i>
-                <span>TEACHER</span>
-                <p class="separator">A dedicated educator committed to nurturing minds, fostering learning, and inspiring growth in students. </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-camera-video"></i>
-                <span>YOUTUBER</span>
-                <p class="separator">A passionate content creator who engages audiences through captivating videos, sharing knowledge and entertainment. </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-lightbulb"></i>
-                <span>MOTIVATOR</span>
-                <p class="separator">An inspiring figure who sparks creativity and positivity, igniting ideas and empowering others to achieve their goals. </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </div><!-- End Services Section -->
 
 <!-- ======= Sayari for Mother Section ======= -->
 <div id="sayari" class="paddsection">
@@ -147,6 +112,38 @@
       </div>
 
     </div><!-- End Journal Section -->
+
+    <!-- ======= Services Section ======= -->
+    <div id="services" class="paddsection">
+      <div class="container">
+
+        <div class="section-title text-center">
+          <h2>Testimonial</h2>
+        </div>
+
+        <div class="services-slider swiper" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="swiper-wrapper">
+
+            {% for feedback in feedbacks %}
+            <div class="swiper-slide">
+              <div class="services-block">
+                <i class="bi bi-chat-dots"></i>
+                <span>{{ feedback.name }}</span>
+                <p class="separator"> {{ feedback.message }} </p>
+              </div>
+            </div><!-- End testimonial item -->
+            {% endfor %}
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </div><!-- End Services Section -->
+
+
 
     <!-- ======= Contact Section ======= -->
     <div id="contact" class="paddsection">

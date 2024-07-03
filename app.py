@@ -12,16 +12,18 @@ def load_content():
         sayari_data = json.load(sayari_file)
     with open('static/data/urls.json') as urls_file:
         links = json.load(urls_file)
+    with open('static/data/feedbacks.json') as feed_file:
+        feedbacks = json.load(feed_file)
 
-    return content, links, sayari_data
+    return content, links, sayari_data, feedbacks
 
 # Route for the home page
 @app.route('/')
 def home():
     image_folder = os.path.join('static', 'gallary')
     image_names = os.listdir(image_folder)
-    content, links, sayari_data = load_content()
-    return render_template('index.html', links=links, my=content, sayari=sayari_data, images=image_names)
+    content, links, sayari_data, feedbacks = load_content()
+    return render_template('index.html', links=links, my=content, sayari=sayari_data, images=image_names, feedbacks=feedbacks)
 
 @app.route('/<path:page>')
 def render_page(page):
