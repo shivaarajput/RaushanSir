@@ -1,86 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Roushan Kumar | Expert Tally Accounting Teacher and Educator</title>
 
-  <title>Roushan Kumar | Expert Tally Accounting Teacher and Educator</title>
+    <!-- Meta Description -->
+    <meta
+      content="Learn Tally accounting from expert teacher Roushan Kumar."
+      name="description"
+    />
 
-  <!-- Meta Description -->
-  <meta content="Learn Tally accounting from expert teacher Roushan Kumar." name="description">
+    <!-- Meta Keywords -->
+    <meta
+      content="Tally, Accounting, Roushan Kumar, Teacher, Educator, Finance"
+      name="keywords"
+    />
 
-  <!-- Meta Keywords -->
-  <meta content="Tally, Accounting, Roushan Kumar, Teacher, Educator, Finance" name="keywords">
+    <!-- Open Graph Meta Tags -->
+    <meta
+      content="Roushan Kumar | Expert Tally Accounting Teacher and Educator"
+      property="og:title"
+    />
+    <meta
+      content="Learn Tally accounting from expert teacher Roushan Kumar."
+      property="og:description"
+    />
+    <meta content="https://roushantallyt.vercel.app/" property="og:url" />
+    <meta
+      content="https://roushantallyt.vercel.app/static/assets/img/home-bg.jpg"
+      property="og:image"
+    />
 
-  <!-- Open Graph Meta Tags -->
-  <meta content="Roushan Kumar | Expert Tally Accounting Teacher and Educator" property="og:title">
-  <meta content="Learn Tally accounting from expert teacher Roushan Kumar." property="og:description">
-  <meta content="https://roushantallyt.vercel.app/" property="og:url">
-  <meta content="https://roushantallyt.vercel.app/static/assets/img/home-bg.jpg" property="og:image">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Roushan Kumar | Expert Tally Accounting Teacher and Educator"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn Tally accounting from expert teacher Roushan Kumar."
+    />
+    <meta
+      name="twitter:image"
+      content="{{ url_for('static', filename='assets/img/home-bg.jpg') }}"
+    />
+    <meta name="twitter:url" content="https://roushantallyt.vercel.app/" />
 
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Roushan Kumar | Expert Tally Accounting Teacher and Educator">
-  <meta name="twitter:description" content="Learn Tally accounting from expert teacher Roushan Kumar.">
-  <meta name="twitter:image" content="{{ url_for('static', filename='assets/img/home-bg.jpg') }}">
-  <meta name="twitter:url" content="https://roushantallyt.vercel.app/"> 
+    <!-- Favicons -->
+    <link
+      href="{{ url_for('static', filename='assets/img/favicon.png') }}"
+      rel="icon"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}"
+      rel="apple-touch-icon"
+    />
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i"
+      rel="stylesheet"
+    />
 
-  <!-- Favicons -->
-  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <!-- Vendor CSS Files -->
+    <link
+      href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link
+      href="{{ url_for('static', filename='assets/css/style.css') }}"
+      rel="stylesheet"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
-
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: Folio
   * Template URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
   * Updated: Mar 17 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+  </head>
 
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="https://instagram.com/shivamsinghamrajput" class="logo"
+          ><img
+            src="{{ url_for('static', filename='assets/img/logo.png') }}"
+            alt=""
+            class="img-fluid"
+        /></a>
+        <!-- Uncomment below if you prefer to use an text logo -->
+        <!-- <h1 class="logo"><a href="index.html">Folio</a></h1> -->
 
-<body>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="/#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="/#about">About</a></li>
+            <li><a class="nav-link scrollto" href="/#sayari">Sayari</a></li>
+            <li><a class="nav-link scrollto" href="/#journal">Galary</a></li>
+            <li>
+              <a class="nav-link scrollto" href="/#services">Testimonial</a>
+            </li>
+            <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="/upload_image">Upload New Photo</a></li>
+          </ul>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center justify-content-between">
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
 
-      <a href="https://instagram.com/shivamsinghamrajput" class="logo"><img src="{{ url_for('static', filename='assets/img/logo.png') }}" alt="" class="img-fluid"></a>
-      <!-- Uncomment below if you prefer to use an text logo -->
-      <!-- <h1 class="logo"><a href="index.html">Folio</a></h1> -->
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="/#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="/#about">About</a></li>
-          <li><a class="nav-link  scrollto" href="/#sayari">Sayari</a></li>
-          <li><a class="nav-link  scrollto" href="/#journal">Galary</a></li>
-          <li><a class="nav-link scrollto" href="/#services">Testimonial</a></li>
-          <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-    {% block content %}{% endblock %}
-    
-    {% include 'footer.html' %}
-</body>
+    {% block content %}{% endblock %} {% include 'footer.html' %}
+  </body>
 </html>

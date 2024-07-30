@@ -1,218 +1,274 @@
 <!-- index.html -->
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <!-- Your unique content for this page goes here -->
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="home">
+<!-- ======= Hero Section ======= -->
+<div id="hero" class="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>I'm <span class="typed" data-typed-items="{{ my.name }}"></span></h1>
+      <p>{{ my.description }}</p>
 
-    <div class="container">
-      <div class="hero-content">
-        <h1>I'm <span class="typed" data-typed-items="{{ my.name }}"></span></h1>
-        <p>{{ my.description }}</p>
-
-        <ul class="list-unstyled list-social">
-
-          <li><a href="{{ links.phone }}"><i class="bi bi-telephone"></i></a></li>
-          <li><a href="{{ links.youtube }}"><i class="bi bi-youtube"></i></a></li>
-          <li><a href="{{ links.instagram }}"><i class="bi bi-instagram"></i></a></li>
-          <li><a href="{{ links.telegram }}"><i class="bi bi-telegram"></i></a></li>
-        </ul>
-      </div>
+      <ul class="list-unstyled list-social">
+        <li>
+          <a href="{{ links.phone }}"><i class="bi bi-telephone"></i></a>
+        </li>
+        <li>
+          <a href="{{ links.youtube }}"><i class="bi bi-youtube"></i></a>
+        </li>
+        <li>
+          <a href="{{ links.instagram }}"><i class="bi bi-instagram"></i></a>
+        </li>
+        <li>
+          <a href="{{ links.telegram }}"><i class="bi bi-telegram"></i></a>
+        </li>
+      </ul>
     </div>
-  </div><!-- End Hero -->
+  </div>
+</div>
+<!-- End Hero -->
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <div id="about" class="paddsection">
-      <div class="container">
-
+<main id="main">
+  <!-- ======= About Section ======= -->
+  <div id="about" class="paddsection">
+    <div class="container">
       <div class="section-title text-center">
         <h2>About</h2>
       </div>
 
-        <div class="row justify-content-between">
-
-          <div class="col-lg-4 ">
-            <div class="div-img-bg">
-              <div class="about-img">
-                <img src="{{ url_for('static', filename='assets/img/me.jpg') }}" class="img-responsive" alt="me">
-              </div>
+      <div class="row justify-content-between">
+        <div class="col-lg-4">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img
+                src="{{ url_for('static', filename='assets/img/me.jpg') }}"
+                class="img-responsive"
+                alt="me"
+              />
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-7">
-            <div class="about-descr">
-
-              <p class="p-heading">I'm based in Biharsharif, India, specializing in accounting with Tally. I enjoy working with numbers & ensuring accurate financial records.</p>
-              <p class="separator">To someone from Biharsharif, it might seem like simplified English. Indian languages, like Hindi, share common roots.</p>
-
-            </div>
-
+        <div class="col-lg-7">
+          <div class="about-descr">
+            <p class="p-heading">
+              I'm based in Biharsharif, India, specializing in accounting with
+              Tally. I enjoy working with numbers & ensuring accurate financial
+              records.
+            </p>
+            <p class="separator">
+              To someone from Biharsharif, it might seem like simplified
+              English. Indian languages, like Hindi, share common roots.
+            </p>
           </div>
         </div>
       </div>
-    </div><!-- End About Section -->
-
-<!-- ======= Sayari for Mother Section ======= -->
-<div id="sayari" class="paddsection">
-
-  <div class="container">
-
-    <div class="section-title text-center">
-      <h2>Sayari for Mother</h2>
     </div>
   </div>
+  <!-- End About Section -->
 
-  <div class="container">
-    <div class="row portfolio-container">
-      {% for item in sayari %}
-      <div class="col-lg-4 col-md-6 portfolio-item">
-          <a href="https://www.youtube.com/watch?v={{ item.video_id }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ item.title }}"><img src="https://img.youtube.com/vi/{{ item.video_id }}/hqdefault.jpg" class="img-fluid" alt=""> </a>
-        <div class="portfolio-info">
-          <a href="https://www.youtube.com/watch?v={{ item.video_id }}" class="details-link" title="More Details"><p class="separator">{{ item.title }}</p></a>
-        </div>
-        <hr>
+  <!-- ======= Sayari for Mother Section ======= -->
+  <div id="sayari" class="paddsection">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Sayari for Mother</h2>
       </div>
-      {% endfor %}
     </div>
 
+    <div class="container">
+      <div class="row portfolio-container">
+        {% for item in sayari %}
+        <div class="col-lg-4 col-md-6 portfolio-item">
+          <a
+            href="https://www.youtube.com/watch?v={{ item.video_id }}"
+            data-gallery="portfolioGallery"
+            class="portfolio-lightbox preview-link"
+            title="{{ item.title }}"
+            ><img
+              src="https://img.youtube.com/vi/{{ item.video_id }}/hqdefault.jpg"
+              class="img-fluid"
+              alt=""
+            />
+          </a>
+          <div class="portfolio-info">
+            <a
+              href="https://www.youtube.com/watch?v={{ item.video_id }}"
+              class="details-link"
+              title="More Details"
+              ><p class="separator">{{ item.title }}</p></a
+            >
+          </div>
+          <hr />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
+  <!-- End Sayari for Mother Section -->
 
-</div><!-- End Sayari for Mother Section -->
-
-
-    <!-- ======= Journal Section ======= -->
-    <div id="journal" class="text-left paddsection">
-
-      <div class="container">
-        <div class="section-title text-center">
-          <h2>Galary</h2>
-        </div>
+  <!-- ======= Journal Section ======= -->
+  <div id="journal" class="text-left paddsection">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Galary</h2>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="journal-block">
-          <div class="row">
-
-      {% for image in images %}
-            <div class="col-lg-4 col-md-6">
-              <div class="journal-info">
-
-                <a href="{{ url_for('static', filename='gallary/' + image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"><img src="{{ url_for('static', filename='gallary/' + image) }}" class="img-responsive" alt="img"></a>
-
-              </div>
+    <div class="container">
+      <div class="journal-block">
+        <div class="row">
+          {% for image in images %}
+          <div class="col-lg-4 col-md-6">
+            <div class="journal-info">
+              <a
+                href="{{ url_for('static', filename='gallary/' + image) }}"
+                data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link"
+                ><img
+                  src="{{ url_for('static', filename='gallary/' + image) }}"
+                  class="img-responsive"
+                  alt="img"
+              /></a>
             </div>
-      {% endfor %}
-
           </div>
+          {% endfor %}
         </div>
       </div>
+    </div>
+  </div>
+  <!-- End Journal Section -->
 
-    </div><!-- End Journal Section -->
-
-    <!-- ======= Services Section ======= -->
-    <div id="services" class="paddsection">
-      <div class="container">
-
-        <div class="section-title text-center">
-          <h2>Testimonial</h2>
-        </div>
-
-        <div class="services-slider swiper" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="swiper-wrapper">
-
-            {% for feedback in feedbacks %}
-            <div class="swiper-slide">
-              <div class="services-block">
-                <i class="bi bi-chat-dots"></i>
-                <span>{{ feedback.name }}</span>
-                <p class="separator"> {{ feedback.message }} </p>
-              </div>
-            </div><!-- End testimonial item -->
-            {% endfor %}
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
+  <!-- ======= Services Section ======= -->
+  <div id="services" class="paddsection">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Testimonial</h2>
       </div>
 
-    </div><!-- End Services Section -->
-
-
-
-    <!-- ======= Contact Section ======= -->
-    <div id="contact" class="paddsection">
-      <div class="container">
-        <div class="contact-block1">
-          <div class="row">
-
-            <div class="col-lg-6">
-              <div class="contact-contact">
-
-                <h2 class="mb-30">GET IN TOUCH</h2>
-
-                <ul class="contact-details">
-                  <li><span>{{ my.address }}</span></li>
-                  <li><span>{{ my.city }}, {{my.country}}</span></li>
-                  <li><span>{{ my.phone }}</span></li>
-                  <li><span>{{ my.email }}</span></li>
-                </ul>
-
-              </div>
+      <div
+        class="services-slider swiper"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="swiper-wrapper">
+          {% for feedback in feedbacks %}
+          <div class="swiper-slide">
+            <div class="services-block">
+              <i class="bi bi-chat-dots"></i>
+              <span>{{ feedback.name }}</span>
+              <p class="separator">{{ feedback.message }}</p>
             </div>
+          </div>
+          <!-- End testimonial item -->
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End Services Section -->
 
-            <div class="col-lg-6">
-              <form action="/submit_form" method="post" role="form" class="php-email-form">
-                <div class="row gy-3">
+  <!-- ======= Contact Section ======= -->
+  <div id="contact" class="paddsection">
+    <div class="container">
+      <div class="contact-block1">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="contact-contact">
+              <h2 class="mb-30">GET IN TOUCH</h2>
 
-                  <div class="col-lg-6">
-                    <div class="form-group contact-block1">
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                    </div>
+              <ul class="contact-details">
+                <li><span>{{ my.address }}</span></li>
+                <li><span>{{ my.city }}, {{my.country}}</span></li>
+                <li><span>{{ my.phone }}</span></li>
+                <li><span>{{ my.email }}</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form
+              action="/submit_form"
+              method="post"
+              role="form"
+              class="php-email-form"
+            >
+              <div class="row gy-3">
+                <div class="col-lg-6">
+                  <div class="form-group contact-block1">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required
+                    />
                   </div>
-
-                  <div class="col-lg-6">
-                    <div class="form-group">
-<!--                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required> -->
-                      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone Number" required>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-12">
-                    <div class="form-group">
-                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-12">
-                    <div class="form-group">
-                      <textarea class="form-control" name="message" placeholder="Message" required></textarea>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-
-                  <div class="mt-0">
-                    <input type="submit" class="btn btn-defeault btn-send" value="Send message">
-                  </div>
-
                 </div>
-              </form>
-            </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <!--                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required> -->
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      id="phone"
+                      placeholder="Your Phone Number"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      id="subject"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+
+                <div class="mt-0">
+                  <input
+                    type="submit"
+                    class="btn btn-defeault btn-send"
+                    value="Send message"
+                  />
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </div><!-- End Contact Section -->
-
-  </main><!-- End #main -->
+    </div>
+  </div>
+  <!-- End Contact Section -->
+</main>
+<!-- End #main -->
 
 {% endblock %}
